@@ -23,11 +23,11 @@ class Input extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name:
-                        <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                    <label className="InputLabel">
+                        <h1> What Times Table? </h1>
+                        <input className="InputArea" type="text" value={this.state.value} onChange={this.handleChange}/>
                     </label>
-                    <input type="submit" value="Submit"/>
+                    <input className="SubmitBtn" type="submit" value="Submit"/>
                 </form>
             </div>
         );
