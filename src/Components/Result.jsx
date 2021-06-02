@@ -13,10 +13,6 @@ class Result extends Component {
 
     render() {
         let i = this.props.number;
-        console.log(i);
-        if(i===null){
-            i = 0;
-        }
         return (
             <div>
                <h1>{i} x 1 = {this.calc(i,1)}</h1>
