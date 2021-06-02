@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-
+import Result from './Result';
+import PropTypes from 'prop-types';
 class Input extends Component {
-
+    
     constructor(props){
+
         super(props);
-        this.state = {value:''};
+        this.state = {value:2};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,7 +17,6 @@ class Input extends Component {
     }
 
     handleSubmit(event){
-        alert('A name was submitted:' + this.state.value);
         event.preventDefault();
     }
 
@@ -27,11 +28,14 @@ class Input extends Component {
                         <h1> What Times Table? </h1>
                         <input className="InputArea" type="text" value={this.state.value} onChange={this.handleChange}/>
                     </label>
-                    <input className="SubmitBtn" type="submit" value="Submit"/>
+                    {/* <input className="SubmitBtn" type="submit" value="Submit"/> */}
                 </form>
+
+                <Result number={this.state.value}/>
             </div>
         );
     }
 }
+
 
 export default Input;
